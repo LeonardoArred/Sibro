@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leonardo Arredondo</title>
+        <link rel="stylesheet" href="miSitio.css" type="text/css">
+        <link rel="stylesheet" href="font.css"><!--Iconos-->
+        <link rel="stylesheet" href="main.css"><!--Iconos-->
+        <link rel="stylesheet" href="formulario.css">
+        
+    </head>
+    <body>
+        <!-----------------------------------------------------Titulos--------------------------------------->
+        <header class="page-header">
+            <nav class="trigger-menu-wrapper">             
+                <div class="titulos">
+                    <h1 class="nombre">Jesus Leonardo Arredondo Salas</h1>
+                    <h2 class="desarrollador_web">Desarrollador web</h2>
+                 </div>
+            </nav>
+        </header>
+            <!-------------------------------------------------Menu------------------------------->
+            <div class="trigger-menu-wrapper">
+                <ul class="center">
+                    <li class="menu"><a href= "#inicio">Inicio</a></li>
+                    <li class="menu"><a href="#acerca de mi">Acerca de mi</a></li>
+                    <li class="menu"><a href="#contacto">Contacto</a></li>
+                    <li class="menu"><a href="#blog">Blog</a></li>
+                    <li class="menu"><a href="#portafolio">Portafolio</li>
+                </ul>
+            </div>
+        
+
+        <main>
+
+            <!---------------------------------------------Aqui inician las imagenes----------------------->
+            <div id="sld">
+                <div class="slider">
+                    <div class="slides">
+                        <!--Botones inicio-->
+                        <input type="radio" name="radio-btn" id="radio1">  
+                        <input type="radio" name="radio-btn" id="radio2">         
+                        <input type="radio" name="radio-btn" id="radio3">         
+                        <input type="radio" name="radio-btn" id="radio4">     
+                        <!--Botones fin-->    
+                        <!--Slide de las imagenes inicio-->
+                        <div class="slide first"><p id="welcoming">
+                            <p class="texto">Bienvenido a mi sitio</p><img src="foto.jpeg" alt="" class="imagenes">
+                        </div>
+                        <div class="slide">
+                            <p class="texto">Diseño web que se adapta a tus necesidades</p><img src="foto1.jpeg" alt="" class="imagenes">
+                        </div>
+                        <div class="slide">
+                            <p class="texto">Desarrollo de apps (muy pronto)</p><img src="foto2.jpeg" alt="" class="imagenes">
+                        </div>
+                        <div class="slide">
+                            <p class="texto">Plataformas para ecommerce (muy  pronto)</p><img src="foto3.jpeg" alt="" class="imagenes">
+                        </div>
+                        <!--SLide de imagenes fin-->
+                        <!--Inicio navegacion auomatica-->
+                        <div class="auto-navegacion">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                        <!--FIn navegacion automatica-->
+                        <!--INicio navegacion manual-->
+                        <div class="navegacion-manual">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label>
+                            <label for="radio4" class="manual-btn"></label>
+                        </div>
+                        <!--FIn navegacion manual   -->
+                    </div>         
+                </div>
+            </div>
+            <!--Fin de las imagenes -->
+            <!--SOcial bar inicio-->
+            <div class="social-bar">
+                <a href="https://www.facebook.com/Leonardo1121" class="icon icon-facebook" target="_blank"></a>
+                <a href="https://www.instagram.com/leonardo_arredondo/" class="icon icon-instagram" target="_blank"></a>
+                <a href="https://twitter.com/leonardArre" class="icon icon-twitter" target="_blank"></a>
+                <a href="https://www.google.com/maps/place/Mazatl%C3%A1n,+Sin./@23.2467282,-106.4924891,12z/data=!3m1!4b1!4m5!3m4!1s0x869f5341681837c1:0x62a4c4aaf13c72b2!8m2!3d23.2494148!4d-106.4111425" class="icon icon-location" target="_blank"></a>
+            </div>
+            <!--Social bar fin-->
+            <!-------------------------------------------INicio formulario----------------------------->
+                <section id="contact">
+                    <div class="u-wrapper">
+                    <div class="contact-content">
+                
+                        <form id="form" action="" class="form">
+                        <h3 class="tag"><span class="color-letra">HABLEMOS</span></h3>
+                        <label for="name" class="color-letra">Nombre Completo <span>*</span></label>
+                        <input name="name" required type="text" id="name" placeholder="Leonardo Arredondo">
+                        <label for="email" class="color-letra">Correo electrónico <span>*</span></label>
+                        <input name="email" type="text" id="email" required placeholder="leonardo@gmail.com">
+                        <label for="message" class="color-letra">Mensaje</label>
+                        <textarea id="message" name="message" id="textarea" cols="30" rows="10"></textarea>
+                        <button type="submit" class="btn primary full">enviar mensaje</button>
+                        </form>
+                        <a href="mailto:leonardo_arredondo1121@hotmail.com" id="trucazo"></a>
+                    </div>
+                    </div>
+                </section>
+        </main>
+        <script type="text/javascript"> //Para que los slides jalen solos
+           // document.getElementById("menu").addEventListener("click",function(){
+            //document.getElementById("navega").classList.toggle("mostrar");});
+            var counter = 0;
+            var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter >4){
+                counter = 1;
+            }
+        }, 4000);
+            const $form = document.querySelector('#form')//PAra que el formulario sirva
+            const $buttonMailto = document.querySelector('#trucazo')
+
+            $form.addEventListener('submit', handleSubmit)
+
+            function handleSubmit(event) {
+            event.preventDefault()
+            const form = new FormData(this)
+            $buttonMailto.setAttribute('href', `mailto:me@leonardoa_arredondo1121@.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('message')}`)
+            $buttonMailto.click()
+            }
+            //Menu oculto
+            const body = document.body;
+            const triggerMenu = document.querySelector(".page-header .trigger-menu");
+            const nav = document.querySelector(".page-header nav");
+            const menu = document.querySelector(".page-header .menu");
+            const lottieWrapper = document.querySelector(".lottie-wrapper");
+            const lottiePlayer = document.querySelector("lottie-player");
+            const scrollUp = "scroll-up";
+            const scrollDown = "scroll-down";
+            let lastScroll = 0;
+
+            triggerMenu.addEventListener("click", () => {
+            body.classList.toggle("menu-open");
+            });
+
+            lottieWrapper.addEventListener("click", (e) => {
+            e.preventDefault();
+            triggerMenu.click();
+            body.classList.toggle("menu-open-with-lottie");
+            });
+
+            window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                body.classList.remove(scrollUp);
+                return;
+            }
+
+            if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+                // down
+                body.classList.remove(scrollUp);
+                body.classList.add(scrollDown);
+                lottiePlayer.play();
+            } else if (
+                currentScroll < lastScroll &&
+                body.classList.contains(scrollDown)
+            ) {
+                // up
+                body.classList.remove(scrollDown);
+                body.classList.add(scrollUp);
+                lottiePlayer.stop();
+            }
+            lastScroll = currentScroll;
+            });
+            </script>
+    </body>
+
+</html>
