@@ -1,0 +1,212 @@
+  .h3 {
+    font-size: 48px;
+    line-height: 77px;
+  }
+  
+  .btn {
+    /* font-family: var(--font); */
+    border-radius: 100px;
+    letter-spacing: 1.25px;
+    block-size: 50px;
+    display:inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 50px;
+    width: 10px;
+    border: 1px solid blue;
+    font-weight: bold;
+    padding: 1px 1.5em;
+    top:500px;
+    position: relative;
+    box-sizing: border-box;
+    
+
+  }
+ 
+  .btn.full {
+    margin: 12px 10px; 
+    width: 479px; 
+    height: 45px;
+    box-sizing: border-box; 
+    position: absolute;
+  }
+  
+  .btn.primary {
+    
+    background: var(--primary);
+  }
+  
+  
+  
+  .btn.secondary img{
+    position: relative;
+    bottom: 1px;
+  }
+  .btn i {
+    display: inline-block;
+  }
+  .btn span {
+    vertical-align: middle;
+
+  }
+  .btn i img {
+    vertical-align: middle;
+  }
+  
+  .hero {
+    margin-block-end: 80px;
+  }
+  
+  
+  .hero-content img{
+    display: block;
+    margin: 0 auto;
+    /* text-align: center; */
+  }
+  
+  
+  .header {
+    padding: 1em 0;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pre-projects-content {
+    text-align: center;
+  }
+  
+  .pre-projects-content p {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 38px;
+    letter-spacing: 0.5%;
+  }
+  
+  .pre-projects-content p + p {
+    font-weight: bold;
+  }
+  
+  .project {
+    display: grid;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-areas: "image" "description";
+  }
+  
+  
+ 
+    .form label {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: .5em;
+    padding-inline-start: .5em;
+  }
+  
+  .form label span {
+    color: #DA1414;
+  }
+  
+  .form input, .form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1rem;
+    padding: .8em;
+    border-radius: .5em;
+    border: 1px solid #858C94;
+    
+  }
+  
+  
+  input::-webkit-input-placeholder {
+    color: #0F0A0A88;
+  }
+  
+  /*CUadro formulario inicio */
+#contact {/*Posicion del elemento*/
+  width: 700px;
+  height: 500px;
+ /* border: 1px solid;
+  border-radius: 10px;
+  border-color:red;*/
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+  }
+.form {
+    top: 270px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    max-inline-size: 550px;
+    background: #4caf50;
+    width: 510px;
+    height: 560px;
+    align-items: center;
+    position: relative;
+}
+ /*Cuadro formulario fin*/ 
+  .footer {
+    text-align: center;
+  }
+  
+  #trucazo {
+    opacity: 0;
+  }
+ 
+ 
+  .form .tag span {
+    display: block;
+    text-align: center;
+  }
+
+#email{
+    margin: 12px 10px; 
+    width: 479px; 
+    height: 30px;
+    box-sizing: border-box;
+}
+
+
+#name{
+    margin: 12px 10px; 
+    width: 479px; 
+    height: 30px;
+    box-sizing: border-box;
+
+
+}
+section{
+    align-items: center;
+}
+
+.form input[type="text"]{
+    width: 100%;
+    padding: 20px;
+    margin: 12px 10px;
+    border-radius: 3px;
+    border: 1px solid #226fc1;
+    font-family: Arial;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.form textarea {
+    margin: 12px 10px; 
+    width: 480px; 
+    height: 128px;
+    position: absolute;
+    box-sizing: border-box;
+    resize: none;
+  }
+
+  /*Fuente*/
+.color-letra{
+  color:white;
+  font-family: "IBM Plex Serif",   cursive;
+  background-color: #4caf50;
+  font-size: 14px;
+  font-weight: bold;
+}
+
